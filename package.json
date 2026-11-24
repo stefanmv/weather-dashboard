@@ -1,0 +1,11 @@
+{
+    "private": true,
+    "scripts": {
+        "postinstall": "npm --prefix frontend install",
+        "build": "npm --prefix frontend run build",
+        "dev": "concurrently -k -n api,web -c blue,green \"php artisan serve\" \"npm --prefix frontend run dev\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1"
+    }
+}
